@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:18
+    restart: always
+    volumes:
+      - ./data/db:/var/lib/postgresql
+    ports:
+      - 5432:5432
+
+    environment:
+      - POSTGRES_DB=devsearchDB
+      - POSTGRES_USER=devsearch
+      - POSTGRES_PASSWORD=atulyajaiswal
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
