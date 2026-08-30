@@ -12,6 +12,7 @@ CREATE TABLE documents (
     source TEXT NOT NULL,
     source_id TEXT NOT NULL,
     url TEXT,
+    score INTEGER,
     title TEXT NOT NULL,
     body TEXT NOT NULL,
     author TEXT,
@@ -19,4 +20,4 @@ CREATE TABLE documents (
     updated_at TIMESTAMPTZ,
     metadata JSONB,
     UNIQUE (source, source_id)
-)
+);
