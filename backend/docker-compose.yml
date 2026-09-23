@@ -3,12 +3,12 @@ services:
     image: postgres:18
     restart: always
     volumes:
-      - ./data/db:/var/lib/postgresql
+      - ./data/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
     environment:
-      - POSTGRES_DB=devsearchDB
+      - POSTGRES_DB=devsearchdb
       - POSTGRES_USER=devsearch
       - POSTGRES_PASSWORD=atulyajaiswal
 
