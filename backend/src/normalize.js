@@ -1,9 +1,8 @@
-import pool from "./db.js";
 import sanitizeHtml from "sanitize-html";
 
 import he from "he";
 
-async function normalizeDocument(rawRow) {
+export async function normalizeDocument(rawRow) {
   const rawBody = rawRow.raw_data.body;
 
   const noTags = sanitizeHtml(rawBody, {

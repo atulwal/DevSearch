@@ -1,5 +1,4 @@
- 
-CREATE TABLE raw_documents (
+ CREATE TABLE raw_documents (
   id SERIAL PRIMARY KEY,
   source TEXT NOT NULL,
   source_id TEXT NOT NULL,
